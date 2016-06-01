@@ -1,0 +1,68 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2016/04/07, 14:27:48
+    Author     : fukuda
+*/
+body{
+    font-size:  20pt;
+    /*
+    font-family: 'メイリオ', 'Osaka7';
+    */
+    color: green;
+}
+
+b{
+    font-size: 30pt;
+    color: red;
+    font-style: italic;
+}
+
+h2{
+    font-size: 1.2em;
+    color: blue;
+}
+/*
+canvas{
+    background-color: rgba( 0, 255, 255, 0.55 );
+
+    position: absolute;
+}
+*/
+*{
+    margin: 0;
+}
+.contens{
+    width: auto;
+    height: auto;
+    position: absolute;
+    left: 30px;
+    top: 200px;
+    background-color: rgba( 204, 255, 204, 0.55 );
+}
+
+.btn{
+    margin-top: 10px;
+    width: 100px;
+    font-size: 0.9em;
+    font-weight: bold;
+    padding: 3px
+}
+.c1{
+    width: 100px;
+    text-align: center;
+    background-color: #dddddd;
+    padding: 3px;
+}
+.c2{
+    width: 200px;
+    padding: 3px;
+}
+
+.error{
+    font-size: 0.8em;
+    color: #000000;
+}

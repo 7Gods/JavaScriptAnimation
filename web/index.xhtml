@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <h:outputStylesheet library="css" name="mystyles.css"/>
+        <h:outputScript library="js" name="windmillDesign.js" target="body"/>
+        <h:outputScript library="js" name="operationObj.js" target="body"/>
+        <h:outputScript library="js" name="windmillObj.js" target="body"/>
+        <h:outputScript library="js" name="windmillLogic.js" target="body"/>
+        <h:outputScript library="js" name="windmill.js" target="body"/>
+    </h:head>
+    <h:body>
+        <canvas id="CanCan"></canvas>
+        <div class="contens">
+            <h2>名簿データの作成</h2>
+            <h:form>
+                書籍名：<h:inputText value="#{bookBean.bookName}"/><br/>
+                著者名：<h:inputText value="#{bookBean.author}"/><br/>
+                価 格：<h:inputText value="#{bookBean.price}"/><br/>
+                <h:commandButton value="送信" 
+                                 action="#{bookBean.next()}"/>
+            </h:form>
+            <h:form>
+                <h:panelGrid columns="2" cellspacing="0" border="1"
+                         rules="a11" columnClasses="c1,c2">
+                    <f:facet name="caption">
+                        panelGridの表
+                    </f:facet>
+                    書籍名：<h:inputText value="#{bookBean.bookName}"/>
+                    著者名：<h:inputText value="#{bookBean.author}"/>
+                    価 格：<h:inputText value="#{bookBean.price}"/>
+                </h:panelGrid>
+                <h:commandButton value="送信" 
+                                 action="#{bookBean.next()}"
+                                 styleClass="btn"/>
+            </h:form>
+            <h:form>
+                <h:panelGrid columns="3" columnClasses="col">
+                    メール<h:inputText id="mail" required="true"
+                                    requiredMessage="米必須"
+                                    value="#{bb.adress}" size="30" label="メール"/>
+                    <h:message for="mail" errorClass="error"/>
+                    ご質問<h:inputTextarea id="msg" required="true"
+                                    requiredMessage="米必須"
+                                        value="#{bb.msg}" cols="30" rows="5" label="ご質問"/>
+                    <h:message for="msg" errorClass="error" />
+                </h:panelGrid>
+                <h:commandButton value="送信" 
+                                 action="#{bb.next()}"/>
+                <h:messages errorClass="error"/>
+            </h:form>
+        </div>
+    </h:body>
+</html>
+
